@@ -23,8 +23,8 @@ var ruleTester = new RuleTester();
 ruleTester.run("ng-annotate", rule, {
 
   valid: [
-    "module.exports = /* ngAnnotate */ function($log) {}", // properly annotated
-    "module.exports = /* ngAnnotate */ function() {}", // unnecessary annotation, no parameters
+    "module.exports = /* @ngInject */ function($log) {}", // properly annotated
+    "module.exports = /* @ngInject */ function() {}", // unnecessary annotation, no parameters
     "module.exports = function() {}", // no parameters
     "module.exports = blah" // not a function expression
   ],
@@ -33,7 +33,7 @@ ruleTester.run("ng-annotate", rule, {
     {
       code: "module.exports = function($log) {}",
       errors: [{
-        message: "module.exports requires ng-annotation.",
+        message: "module.exports requires ngInject annotation.",
       }]
     }
   ]
