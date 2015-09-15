@@ -10,7 +10,7 @@
 // Requirements
 //------------------------------------------------------------------------------
 
-var rule = require("../../../lib/rules/eslint-ng-annotate"),
+var rule = require("../../../lib/rules/module-exports"),
 
 RuleTester = require("eslint").RuleTester;
 
@@ -20,7 +20,7 @@ RuleTester = require("eslint").RuleTester;
 //------------------------------------------------------------------------------
 
 var ruleTester = new RuleTester();
-ruleTester.run("eslint-ng-annotate", rule, {
+ruleTester.run("ng-annotate", rule, {
 
   valid: [
     "module.exports = /* ngAnnotate */ function($log) {}", // properly annotated

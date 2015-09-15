@@ -1,5 +1,5 @@
 {
-  "name": "eslint-plugin-eslint-ng-annotate",
+  "name": "eslint-plugin-ng-annotate",
   "version": "0.0.0",
   "description": "Verify that ng-annotations are in place.",
   "keywords": [
